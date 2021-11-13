@@ -6,5 +6,9 @@
     {
         "repository":   "android_kernel_xiaomi_surya",
         "target_path":  "kernel/xiaomi/surya"
+    },
+    {
+        "repository":   "vendor_xiaomi_surya",
+        "target_path":  "vendor/xiaomi/surya"
     }
 ]
