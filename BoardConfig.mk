@@ -68,6 +68,10 @@ BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 
 TARGET_KERNEL_CONFIG := surya_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
+TARGET_KERNEL_CLANG_COMPILE := true
+KERNEL_CC := CC=clang
+TARGET_KERNEL_CLANG_VERSION := $(shell ls -d prebuilts/clang/host/linux-x86/clang-r* | sort -V | tail -n 1 | xargs basename)
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/$(TARGET_KERNEL_CLANG_VERSION)
 
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom
 BOARD_KERNEL_CMDLINE += service_locator.enable=1
