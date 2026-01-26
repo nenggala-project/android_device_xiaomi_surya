@@ -16,6 +16,9 @@ $(call inherit-product, device/xiaomi/surya/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Lineage prebuilts
+TARGET_INCLUDES_LOS_PREBUILTS := true
+
 # Axion build flags
 TARGET_DISABLE_EPPE := true
 AXION_CAMERA_REAR_INFO := 64,13,2,2
